@@ -13,6 +13,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -32,7 +33,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'bootstrap-sass', "~> 3.3"
+gem 'font-awesome-rails', "~> 4.3"
+gem 'simple_form'
 gem 'pry-rails', group: [:development, :test]
 
 group :development, :test do

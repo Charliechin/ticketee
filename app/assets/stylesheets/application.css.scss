@@ -1,0 +1,107 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "projects";
+
+// typography
+html {font-size: 1em;}
+
+*{box-sizing:border-box}
+body {
+    padding-top: 70px;
+    font-size: 16px!important;
+    background-color: white;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.998em!important;
+}
+
+h2 {font-size: 2.827em!important;}
+
+h3 {font-size: 1.999em!important;}
+
+h4 {font-size: 1.414em;}
+
+h1,h2,h3,h4 {
+    max-width: 55%;
+}
+small, .font_small {font-size: 0.707em;}
+// !typography
+
+.page-header {
+    position: relative;
+    padding-bottom: 0;
+
+    &:first-child {
+        margin-top: 20px;
+    }
+}
+
+ul.actions {
+    @extend .list-unstyled;
+    @extend .list-inline;
+    position: relative;
+    bottom: -2px;
+    right: 2px;
+    max-width: 45%;
+    text-align: right;
+}
+
+a.new, a.edit, a.delete {
+    @extend .btn;
+
+    &:before {
+        font-family: "FontAwesome";
+        padding-right: 0.5em;
+    }
+}
+
+a.new {
+    @extend .btn-success;
+    &:before {
+        @extend .fa-plus;
+    }
+}
+a.edit {
+    @extend .btn-primary;
+    &:before {
+        @extend .fa-pencil;
+    }
+}
+
+a.delete {
+    @extend .btn-danger;
+    &:before {
+        @extend .fa-trash;
+    }
+}
+
+header {
+    @extend .page-header;
+    position: relative;
+    padding-bottom: 0;
+
+    &:first-child {
+        margin-top: 20px;
+    }
+}
+
+.alert-notice {
+    @extend .alert-success;
+}
+.alert-alert {
+    @extend .alert-danger;
+}
