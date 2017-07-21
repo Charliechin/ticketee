@@ -1,23 +1,2 @@
 <h1>New Project</h1>
-<%= form_for(@project) do |f| %>
- <% if @project.errors.any? %>
-+   4         <div id="error_explanation">
-+   5             <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from be      ing saved:</h2>
-+   6             <ul>
-+   7                 <% @project.errors.full_messages.each do |msg| %>
-+   8                     <li><%= msg %></li>
-+   9                 <% end %>
-+  10             </ul>
-+  11         </div>
-+  12     <% end %>
-    <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-    </p>
-
-    <p>
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-    </p>
-    <%= f.submit %>
-<% end %>
+<%= render "form", project: @project %>
