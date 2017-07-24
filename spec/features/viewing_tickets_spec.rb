@@ -16,7 +16,6 @@ RSpec.feature "Users can view tickets" do
         expect(page).to have_content "Make it shiny!"
         expect(page).to_not have_content "Standards compliance"
 
-        binding.pry
         click_link "Make it shiny!"
         within("#ticket h2") do
          expect(page).to have_content "Make it shiny!"
