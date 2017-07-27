@@ -57,10 +57,10 @@ ul.actions {
     bottom: -2px;
     right: 2px;
     max-width: 45%;
-    text-align: right;
+    text-align: left;
 }
 
-a.new, a.edit, a.delete {
+a.new, a.edit, a.delete, a.back {
     @extend .btn;
 
     &:before {
@@ -89,6 +89,12 @@ a.delete {
     }
 }
 
+a.back {
+    @extend .btn-default;
+    &:before {
+        @extend .fa-trash;
+    }
+}
 header {
     @extend .page-header;
     position: relative;
