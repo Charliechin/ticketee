@@ -3,6 +3,17 @@
         <h1><%= @project.name %></h1>
     </header>
 
+    <table id="attributes">
+        <tr>
+            <th>Author: </th>
+            <td> <%= @ticket.author.email %> </td>
+        </tr>
+        <tr>
+            <th> Created: </th>
+            <td> <%= time_ago_in_words(@ticket.created_at) %> ago</td>
+        </tr>
+    </table>
+
     <header>
         <h2><%= @ticket.name %></h2>
         <%= link_to "Edit Ticket", edit_project_ticket_path(@project,@ticket), class: "edit" %>
@@ -12,3 +23,4 @@
 
     <%= simple_format(@ticket.description)%>
 </div>
+
