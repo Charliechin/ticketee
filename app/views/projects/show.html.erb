@@ -5,7 +5,7 @@
     <li><%= link_to "Edit project", edit_project_path(@project), class: "edit" %></li>
     <li>
         <%= link_to "Delete project",
-            project_path(@project),
+            admin_project_path(@project),
             method: :delete,
             data: {confirm: "You sure?"},
             class: "delete" %>
